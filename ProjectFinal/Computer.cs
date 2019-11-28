@@ -17,10 +17,6 @@ namespace ProjectFinal
         //Values to be used when getting data from sql
         
         private readonly int id;
-        private readonly string name;
-        private readonly int price;
-        private readonly int storagesize;
-        private readonly int batterycapacity;
         private readonly string use;
         private readonly string storagetype;
         private readonly string operatingsystem;
@@ -47,19 +43,19 @@ namespace ProjectFinal
         //Constructor which is used when taking data from the database
         public Computer(
             int id, 
-            string name, 
-            int price, 
-            int storagesize, 
-            int batterycapacity, 
+            string _name, 
+            double _price, 
+            int _storageSize, 
+            int _batteryCapacity, 
             string use, 
             string storagetype, 
             string operatingsystem)
         {
             this.id = id;
-            this.name = name;
-            this.price = price;
-            this.storagesize = storagesize;
-            this.batterycapacity = batterycapacity;
+            this._name = _name;
+            this._price = _price;
+            this._storageSize = _storageSize;
+            this._batteryCapacity = _batteryCapacity;
             this.use = use;
             this.storagetype = storagetype;
             this.operatingsystem = operatingsystem;
@@ -80,11 +76,13 @@ namespace ProjectFinal
             get { return _storageSize; }
             set { _storageSize = value; }
         }
+        
         public int ComputerUse
         {
             get { return _computerUse; }
             set { _computerUse = value; }
         }
+
         public int StorageType
         {
             get { return _storageType; }
@@ -101,14 +99,7 @@ namespace ProjectFinal
             set { _batteryCapacity = value; }
         }
         //Getters that are used when getting data from the database
-        public string NameDB()
-        { return name; }
-        public int PriceDB()
-        { return price; }
-        public int StoragesizeDB()
-        { return storagesize; }
-        public int BatterycapacityDB()
-        { return batterycapacity; }
+
         public string UseDB()
         { return use; }
         public string StoragetypeDB()

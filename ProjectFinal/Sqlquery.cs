@@ -56,10 +56,10 @@ namespace ProjectFinal
             }
         }
         //Searching Laptop from the database
-        public static void GetFromSqlLaptop(int use, int budget)
+        public static void GetFromSqlLaptop(int useLaptop, int budgetLaptop)
         {
             List<Laptop> searchedcomputers = new List<Laptop>();
-            using (searchComputer = new NpgsqlCommand($"SELECT computer.id, computer.name,computer.price,computer.storagesize, computer.batterycapacity, computeruse.use, storagetype.storagetype, operatingsystem.operating_system FROM computer LEFT JOIN storagetype on computer.storagetypeid = storagetype.idstoragetype LEFT JOIN computeruse on computer.useid = computeruse.idcomputeruse LEFT JOIN operatingsystem on computer.operatingsystemid = operatingsystem.idoperatingsystem WHERE price < {budget}  AND computer.useid = '{use}' AND batterycapacity > 0;", connection))
+            using (searchComputer = new NpgsqlCommand($"SELECT computer.id, computer.name,computer.price,computer.storagesize, computer.batterycapacity, computeruse.use, storagetype.storagetype, operatingsystem.operating_system FROM computer LEFT JOIN storagetype on computer.storagetypeid = storagetype.idstoragetype LEFT JOIN computeruse on computer.useid = computeruse.idcomputeruse LEFT JOIN operatingsystem on computer.operatingsystemid = operatingsystem.idoperatingsystem WHERE price < {budgetLaptop}  AND computer.useid = '{useLaptop}' AND batterycapacity > 0;", connection))
             {
                 searchComputer.Prepare();
                 using NpgsqlDataReader searchresult = searchComputer.ExecuteReader();
@@ -81,10 +81,10 @@ namespace ProjectFinal
             }
         }
         //Searching Desktop from the database
-        public static void GetFromsqlDesktop(int Use, int Budget)
+        public static void GetFromsqlDesktop(int useDesktop, int budgetDesktop)
         {
             List<Desktop> searchedcomputers = new List<Desktop>();
-            using (searchComputer = new NpgsqlCommand($"SELECT computer.id, computer.name,computer.price,computer.storagesize, computer.batterycapacity, computeruse.use, storagetype.storagetype, operatingsystem.operating_system FROM computer LEFT JOIN storagetype on computer.storagetypeid = storagetype.idstoragetype LEFT JOIN computeruse on computer.useid = computeruse.idcomputeruse LEFT JOIN operatingsystem on computer.operatingsystemid = operatingsystem.idoperatingsystem WHERE price < {Budget}  AND computer.useid = '{Use}' AND batterycapacity = 0 OR NULL;", connection))
+            using (searchComputer = new NpgsqlCommand($"SELECT computer.id, computer.name,computer.price,computer.storagesize, computer.batterycapacity, computeruse.use, storagetype.storagetype, operatingsystem.operating_system FROM computer LEFT JOIN storagetype on computer.storagetypeid = storagetype.idstoragetype LEFT JOIN computeruse on computer.useid = computeruse.idcomputeruse LEFT JOIN operatingsystem on computer.operatingsystemid = operatingsystem.idoperatingsystem WHERE price < {budgetDesktop}  AND computer.useid = '{useDesktop}' AND batterycapacity = 0 OR NULL;", connection))
             {
                 searchComputer.Prepare();
                 using NpgsqlDataReader searchresult = searchComputer.ExecuteReader();

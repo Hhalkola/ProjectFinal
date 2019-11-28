@@ -13,7 +13,7 @@
   <Class Name="ProjectFinal.Computer" Collapsed="true">
     <Position X="9.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AwABJMAARQAAAAgAQAAAAAQBAAGFEUAABACEAEAQAgA=</HashCode>
+      <HashCode>AgAAJMAAQQAAAAgAAAAAAAQBAAEFEUAABAAAAEAQAgA=</HashCode>
       <FileName>Computer.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -34,8 +34,18 @@
   <Class Name="ProjectFinal.SqlQuery" Collapsed="true">
     <Position X="11" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ggAAQQAIAAAEAAUCAAABAACAAAAQAIIAAQAAAAAEABA=</HashCode>
+      <HashCode>ggAAQQAIAAAEAAUCAAABAACQAAAQAIJAAQAAAAAEABA=</HashCode>
       <FileName>Sqlquery.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Program" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectFinal.Methods" Collapsed="true">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAQEAEAAAAAAAAAAAAABYAAAAIAAAAAAAAAACABA=</HashCode>
+      <FileName>Methods.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Program" />
