@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProjectFinal
 {
-    class Methods
+    class ComputerFiller
     {
         internal Program Program
         {
@@ -141,7 +141,7 @@ namespace ProjectFinal
                     Console.WriteLine(ex);
                 }
                 //Program wont allow values that are smaller than one or values that are higher than lenght of the array
-                if (aComputerOs >= 1 && aComputerOs < operatingsystem.Length)
+                if (aComputerOs >= 1 && aComputerOs <= operatingsystem.Length)
                 {
                     return aComputerOs;
                 }

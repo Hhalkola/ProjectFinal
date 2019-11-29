@@ -39,13 +39,13 @@ namespace ProjectFinal
                     // Case1 : Adding new computer to database by user values
                     case 1:
                         
-                            string aName = Methods.GiveName();
-                            double aPrice = Methods.GivePrice();
-                            int aStorageSize = Methods.GiveStoragesize();
-                            int aStorageType = Methods.GiveStorageType();
-                            int aComputerOs = Methods.GiveOperatingSystem();
-                            int aComputerUse = Methods.GiveComputerUse();
-                            int aBatteryCapacity = Methods.GiveBatteryCapacity();
+                            string aName = ComputerFiller.GiveName();
+                            double aPrice = ComputerFiller.GivePrice();
+                            int aStorageSize = ComputerFiller.GiveStoragesize();
+                            int aStorageType = ComputerFiller.GiveStorageType();
+                            int aComputerOs = ComputerFiller.GiveOperatingSystem();
+                            int aComputerUse = ComputerFiller.GiveComputerUse();
+                            int aBatteryCapacity = ComputerFiller.GiveBatteryCapacity();
 
                         //Connecting to database
                         SqlQuery.Connection();
@@ -68,8 +68,8 @@ namespace ProjectFinal
 
                     //Searching Laptop from the database
                     case 2:
-                            int useLaptop = Methods.AskUseForSql();
-                            int budgetLaptop = Methods.AskBudgetForSql();
+                            int useLaptop = ComputerFiller.AskUseForSql();
+                            int budgetLaptop = ComputerFiller.AskBudgetForSql();
                             //Connecting to database
                             SqlQuery.Connection();
                             //Method called to import and print Laptops that suit to search criteria
@@ -80,8 +80,8 @@ namespace ProjectFinal
                     //Searching Desktop from the database
                     case 3:
                     
-                            int useDesktop = Methods.AskUseForSql();
-                            int budgetDesktop = Methods.AskBudgetForSql();
+                            int useDesktop = ComputerFiller.AskUseForSql();
+                            int budgetDesktop = ComputerFiller.AskBudgetForSql();
                             //Connecting to database
                             SqlQuery.Connection();
                             //Method called to import and print Laptops that suit to search criteria
@@ -109,7 +109,7 @@ namespace ProjectFinal
 
                     //Delete computer from the sql
                     case 5:
-                        Methods.DeleteFromSql();
+                        ComputerFiller.DeleteFromSql();
 
                     break;
 
